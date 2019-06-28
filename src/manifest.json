@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "version": "0.1.0",
+    "name": "WaPo's Crossword Time Machine",
+    "description": "Bringing the Post Back to the Future",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.washingtonpost.com/crossword-puzzles/daily/*"
+            ],
+            "js": [
+                "moment.min.js",
+                "contentScript.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
